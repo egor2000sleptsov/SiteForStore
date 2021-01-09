@@ -2,11 +2,11 @@ import Header from "./components/Header";
 import {BrowserRouter as Router} from "react-router-dom";
 
 
-function App() {
+function App(props) {
     return (
         <Router>
             <div className="App">
-                <Header/>
+                <Header state={props.state.header} changeSearchValue={props.changeSearchValue}/>
             </div>
         </Router>
     );
