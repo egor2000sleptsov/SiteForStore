@@ -3,10 +3,12 @@ import {Switch, Route} from "react-router-dom";
 import {Button, Container, Form, Nav, Navbar} from "react-bootstrap";
 import Home from "./home/Home";
 import Cart from "./cart/Cart";
+import img from "../files/img.png"
 import s from './header.modules.css'
 
 const Header = (props) => {
     const onSearchValueChange = event => {
+        debugger
         let value = event.target.value
         props.changeSearchValue(value)
     }
@@ -16,8 +18,8 @@ const Header = (props) => {
                 <Container>
                     <Navbar.Brand>
                         <img alt='ss'
-                            src='https://sun9-34.userapi.com/impf/sZpSe8KXozQYFhEvHCBJ94VS1dflLptZ76IuRA/3cOCTLE3-JA.jpg?size=200x200&quality=96&proxy=1&sign=a84cb8ae612789d7144f18484c4b637e&type=album'
-                            width={35} height={35}/>
+                             src={img}
+                            width={50} height={50}/>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                     <Navbar.Collapse id="responsive-navbar-nav">
