@@ -6,7 +6,7 @@ function App(props) {
     return (
         <Router>
             <div className="App">
-                <Header state={props.state.header} changeSearchValue={props.changeSearchValue}/>
+                <Header state={props.state.header} dispatch={props.dispatch}/>
             </div>
         </Router>
     );
