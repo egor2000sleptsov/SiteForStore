@@ -1,6 +1,10 @@
 const SortChange = 'sortHasChange';
 
-const homeReducer = (state, action) => {
+let initialState = {
+    sortValue: '---'
+}
+
+const homeReducer = (state = initialState, action) => {
     switch (action.type) {
         case SortChange:
             state.sortValue = action.par

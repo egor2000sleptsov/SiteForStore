@@ -1,7 +1,11 @@
 const searchValue = "changeSearchValue";
 const searchButtonValue = 'searchButtonClicked';
 
-const headerReducer = (state, action) => {
+let initialState ={
+    searchValue: ''
+}
+
+const headerReducer = (state = initialState, action) => {
     switch (action.type) {
         case searchValue:
             state.searchValue = action.newValue
