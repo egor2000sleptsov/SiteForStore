@@ -13,7 +13,6 @@ let rerenderEntireThree = (state) => {
         </React.StrictMode>,
         document.getElementById('root')
     );
-    debugger
 }
 
 rerenderEntireThree(store.getState())

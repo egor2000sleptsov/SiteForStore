@@ -1,21 +1,17 @@
 import React from 'react';
 import Carousel from "./Carousel/Carousel";
-import {onSortChangeActionCreator} from "../../redux/HomeReducer";
 
 function Home(props) {
     let sortEl = React.createRef()
+
     const onSortChange = event => {
-        let action = onSortChangeActionCreator(sortEl.current.value)
-        props.dispatch(action)
-        console.log(sortEl.current.value)
+        props.sortChange(sortEl)
     }
-
-
     return (
         <div>
             <Carousel/>
             <div>
-                <select name="" onChange={event => onSortChange(event)} ref={sortEl} value={props.state.sortValue}>
+                <select name="" onChange={event => onSortChange(event)} ref={sortEl} value={props.sortValue}>
                     <option>Сначало Дешевые</option>
                     <option>Сначало Дорогие</option>
                     <option>---</option>
