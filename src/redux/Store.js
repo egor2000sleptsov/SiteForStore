@@ -1,28 +1,32 @@
 import fb from "../Firebase.js";
 
+let store = {
+    _state: {
+        header: {
+            searchValue: ''
+        },
+        home:{
 
-let rerenderEntireThree = () => {
-    console.log('hey')
-}
+        },
+        cart:{
 
-let state = {
-    header: {
-        searchValue: ''
+        },
+    },
+    _callSubscrider() {
+        console.log('hey')
+    },
+    getState(){
+        return this._state
+    },
+    changeSearchValue (newValue){
+        this._state.header.searchValue = newValue
+        this._callSubscrider(this._state)
+    },
+    subscride(observer)  {
+        this._callSubscrider = observer
     }
 }
 
-export let refreshState = () => {
 
-}
-
-export const changeSearchValue = newValue => {
-    state.header.searchValue = newValue
-    rerenderEntireThree(state)
-}
-
-export const subscride = (observer) => {
-    rerenderEntireThree = observer
-}
-
-window.state = state
-export default state
+window.store = store
+export default store
