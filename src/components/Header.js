@@ -1,11 +1,11 @@
 import React from 'react';
 import {Switch, Route} from "react-router-dom";
 import {Button, Container, Form, Nav, Navbar} from "react-bootstrap";
-import Home from "./home/Home";
-import Cart from "./cart/Cart";
 import img from "../files/img.png"
-import s from './header.modules.css'
 import {onSearchButtonClickActionCreator, onSearchValueChangeActionCreator} from "../redux/HeaderReducer";
+import HomeContainer from "./home/HomeContainer";
+import CartContainer from "./cart/CartContainer";
+import s from './header.modules.css'
 
 
 
@@ -21,7 +21,7 @@ const Header = (props) => {
     }
 
     let searchEl = React.createRef()
-
+    debugger
     return (
         <div>
             <Navbar collapseOnSelect expand="sm" bg="primary" variant="light">
@@ -58,8 +58,8 @@ const Header = (props) => {
                 </Container>
             </Navbar>
             <Switch>
-                <Route exact path="/" render={()=> <Home state={props.state.home} dispatch={props.dispatch}/>}/>
-                <Route path="/cart" render={()=> <Cart state={props.state.cart} dispatch={props.dispatch}/>}/>
+                <Route exact path="/" render={()=> <HomeContainer store={props.store}/>}/>
+                <Route path="/cart" render={()=> <CartContainer store={props.store}/>}/>
             </Switch>
         </div>
     );
