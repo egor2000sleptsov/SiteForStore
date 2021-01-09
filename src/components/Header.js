@@ -5,21 +5,28 @@ import Home from "./home/Home";
 import Cart from "./cart/Cart";
 import img from "../files/img.png"
 import s from './header.modules.css'
+import {onSearchButtonClickActionCreator, onSearchValueChangeActionCreator} from "../redux/Store";
+
+
+
 
 const Header = (props) => {
-    const onSearchValueChange = event => {
-        debugger
-        let value = event.target.value
-        props.changeSearchValue(value)
+    let onSearchValueChange = event => {
+        let action = onSearchValueChangeActionCreator(event.target.value)
+        props.dispatch(action)
+    }
+    let onButtonClick = event => {
+        let action = onSearchButtonClickActionCreator()
+        props.dispatch(action)
     }
     return (
         <div>
             <Navbar collapseOnSelect expand="sm" bg="primary" variant="light">
                 <Container>
                     <Navbar.Brand>
-                        <img alt='ss'
+                        <img alt='не удалось загрузить изображение'
                              src={img}
-                            width={50} height={50}/>
+                             width={50} height={50}/>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                     <Navbar.Collapse id="responsive-navbar-nav">
@@ -32,7 +39,7 @@ const Header = (props) => {
                                           className='mr-sm-2'
                                           value={props.state.searchValue}
                             />
-                            <Button variant='primary'>Поиск</Button>
+                            <Button variant='primary' onClick={event => onButtonClick(event)}>Поиск</Button>
                         </Form>
                         <Nav>
                             <Nav.Link href="/cart">
