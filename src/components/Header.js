@@ -5,20 +5,23 @@ import Home from "./home/Home";
 import Cart from "./cart/Cart";
 import img from "../files/img.png"
 import s from './header.modules.css'
-import {onSearchButtonClickActionCreator, onSearchValueChangeActionCreator} from "../redux/Store";
+import {onSearchButtonClickActionCreator, onSearchValueChangeActionCreator} from "../redux/HeaderReducer";
 
 
 
 
 const Header = (props) => {
     let onSearchValueChange = event => {
-        let action = onSearchValueChangeActionCreator(event.target.value)
+        let action = onSearchValueChangeActionCreator(searchEl.current.value)
         props.dispatch(action)
     }
     let onButtonClick = event => {
         let action = onSearchButtonClickActionCreator()
         props.dispatch(action)
     }
+
+    let searchEl = React.createRef()
+
     return (
         <div>
             <Navbar collapseOnSelect expand="sm" bg="primary" variant="light">
@@ -37,7 +40,8 @@ const Header = (props) => {
                             <Form.Control type="text" placeholder="Поиск"
                                           onChange={event => onSearchValueChange(event)}
                                           className='mr-sm-2'
-                                          value={props.state.searchValue}
+                                          value={props.state.header.searchValue}
+                                          ref={searchEl}
                             />
                             <Button variant='primary' onClick={event => onButtonClick(event)}>Поиск</Button>
                         </Form>
@@ -54,8 +58,8 @@ const Header = (props) => {
                 </Container>
             </Navbar>
             <Switch>
-                <Route exact path="/" component={Home}/>
-                <Route exact path="/cart" component={Cart}/>
+                <Route exact path="/" render={()=> <Home state={props.state.home} dispatch={props.dispatch}/>}/>
+                <Route path="/cart" render={()=> <Cart state={props.state.cart} dispatch={props.dispatch}/>}/>
             </Switch>
         </div>
     );
