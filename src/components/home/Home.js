@@ -1,5 +1,8 @@
 import React from 'react';
 import Carousel from "./Carousel/Carousel";
+import CSS_Classes from "./home.modules.css";
+import LeftColumn from "./LeftColumn/LeftColumn";
+import ShopItemsArea from "./ShopItemsArea/ShopItemsArea";
 
 function Home(props) {
     let sortEl = React.createRef()
@@ -8,7 +11,7 @@ function Home(props) {
         props.sortChange(sortEl)
     }
     return (
-        <div>
+        <div className={CSS_Classes.home}>
             <Carousel/>
             <div>
                 <select name="" onChange={event => onSortChange(event)} ref={sortEl} value={props.sortValue}>
@@ -17,12 +20,8 @@ function Home(props) {
                     <option>---</option>
                 </select>
             </div>
-            <div>
-                <p><input type='checkbox' onChange={event => {console.log(event.target.checked)}}/><label>Сувениры</label></p>
-                <p><input type='checkbox' onChange={event => {console.log(event.target.checked)}}/><label>Головный убор</label></p><b/>
-                <p><input type='checkbox' onChange={event => {console.log(event.target.checked)}}/><label>Штаны</label></p><b/>
-                <p><input type='checkbox' onChange={event => {console.log(event.target.checked)}}/><label>Толстовки</label></p><b/>
-            </div>
+            <LeftColumn/>
+            <ShopItemsArea/>
         </div>
 );
 }

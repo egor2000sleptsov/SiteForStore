@@ -1,9 +1,10 @@
 import React from 'react';
 import {Carousel as Car} from "react-bootstrap";
+import CSS_Classes from "./Carousel.modules.css";
 
 const Carousel = (props) => {
     return (
-        <Car nextLabel='Следующий'>
+        <Car nextLabel='Следующий' className={CSS_Classes.carousel}>
             <Car.Item>
                 <img
                     src="http://safelme.com/wp-content/uploads/2016/06/03-min.png"
