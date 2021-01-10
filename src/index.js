@@ -4,12 +4,15 @@ import './index.css';
 import App from './App';
 import store from "./redux/redux-store";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {Provider} from "./StoreContext";
 //import reportWebVitals from './reportWebVitals';
 
-let rerenderEntireThree = (state) => {
+let rerenderEntireThree = () => {
     ReactDOM.render(
         <React.StrictMode>
-            <App state={state} dispatch={store.dispatch.bind(store)} store={store}/>
+            <Provider store={store}>
+                <App/>
+            </Provider>
         </React.StrictMode>,
         document.getElementById('root')
     );
@@ -17,7 +20,7 @@ let rerenderEntireThree = (state) => {
 
 rerenderEntireThree(store.getState())
 
-store.subscribe(()=>{
+store.subscribe(() => {
     rerenderEntireThree(store.getState())
 })
 // store.subscride(() => {

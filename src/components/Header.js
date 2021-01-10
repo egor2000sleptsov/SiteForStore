@@ -21,7 +21,6 @@ const Header = (props) => {
     }
 
     let searchEl = React.createRef()
-    debugger
     return (
         <div className={CSS_Classes.header}>
             <Navbar collapseOnSelect expand="sm" bg="primary" variant="light">
@@ -40,7 +39,7 @@ const Header = (props) => {
                             <Form.Control type="text" placeholder="Поиск"
                                           onChange={event => onSearchValueChange(event)}
                                           className='mr-sm-2'
-                                          value={props.state.header.searchValue}
+                                          // value={props.state.header.searchValue}
                                           ref={searchEl}
                             />
                             <Button variant='primary' onClick={event => onButtonClick(event)}>Поиск</Button>
@@ -58,8 +57,8 @@ const Header = (props) => {
                 </Container>
             </Navbar>
             <Switch>
-                <Route exact path="/" render={()=> <HomeContainer store={props.store}/>}/>
-                <Route path="/cart" render={()=> <CartContainer store={props.store}/>}/>
+                <Route exact path="/" render={()=> <HomeContainer />}/>
+                {/*<Route path="/cart" render={()=> <CartContainer />}/>*/}
             </Switch>
         </div>
     );
