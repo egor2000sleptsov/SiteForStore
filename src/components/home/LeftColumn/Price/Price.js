@@ -1,5 +1,5 @@
 import React from 'react';
-import CSS_Classes from "./Price.modules.css";
+import CSS_Classes from "./Price.module.css";
 
 function Price(props) {
     let sortEl = React.createRef()

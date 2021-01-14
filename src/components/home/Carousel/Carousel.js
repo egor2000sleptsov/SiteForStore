@@ -1,6 +1,6 @@
 import React from 'react';
 import {Carousel as Car} from "react-bootstrap";
-import CSS_Classes from "./Carousel.modules.css";
+import CSS_Classes from "./Carousel.module.css";
 
 const Carousel = (props) => {
     return (

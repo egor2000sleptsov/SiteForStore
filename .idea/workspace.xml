@@ -5,10 +5,13 @@
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header.modules.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header.modules.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/home/Carousel/Carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/Carousel/Carousel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/home/home.modules.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/home.modules.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/LeftColumn/Categorys/Categorys.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/LeftColumn/Categorys/Categorys.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/LeftColumn/LeftColumn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/LeftColumn/LeftColumn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/LeftColumn/Price/Price.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/LeftColumn/Price/Price.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/ShopItemsArea/ShopItem/ShopItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/ShopItemsArea/ShopItem/ShopItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/ShopItemsArea/ShopItemsArea.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/ShopItemsArea/ShopItemsArea.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +64,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/home/ShopItemsArea/ShopItem" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -77,11 +80,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Alzaar\PhpstormProjects\site_for_store\src\components\home\ShopItemsArea\ShopItem" />
-      <recent name="C:\Users\Alzaar\PhpstormProjects\site_for_store\src\components\home\LeftColumn\Categorys" />
-      <recent name="C:\Users\Alzaar\PhpstormProjects\site_for_store\src\components\home\LeftColumn\Price" />
-      <recent name="C:\Users\Alzaar\PhpstormProjects\site_for_store\src\components\home\Carousel" />
+      <recent name="C:\Users\Alzaar\PhpstormProjects\site_for_store\src\components" />
+      <recent name="C:\Users\Alzaar\PhpstormProjects\site_for_store\src\components\home" />
       <recent name="C:\Users\Alzaar\PhpstormProjects\site_for_store\src\components\home\ShopItemsArea" />
+      <recent name="C:\Users\Alzaar\PhpstormProjects\site_for_store\src\components\home\ShopItemsArea\ShopItem" />
+      <recent name="C:\Users\Alzaar\PhpstormProjects\site_for_store\src\components\home\LeftColumn" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\George\Documents\Git\react\site_for_store\src\components\home" />
@@ -119,6 +122,8 @@
       <workItem from="1610000056676" duration="15000" />
       <workItem from="1610294299528" duration="6499000" />
       <workItem from="1610300997550" duration="14000" />
+      <workItem from="1610594428524" duration="1454000" />
+      <workItem from="1610596043558" duration="1669000" />
     </task>
     <servers />
   </component>
