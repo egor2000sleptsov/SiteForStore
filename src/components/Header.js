@@ -28,7 +28,7 @@ const Header = (props) => {
                     <Navbar.Brand>
                         <img alt='не удалось загрузить изображение'
                              src={img}
-                             width={50} height={50}/>
+                             className={CSS_Classes.logo}/>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                     <Navbar.Collapse id="responsive-navbar-nav">
