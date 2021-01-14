@@ -1,32 +1,27 @@
 import React from 'react';
 import Home from "./Home";
 import {onFilterChangeActionCreator, onSortChangeActionCreator} from "../../redux/HomeReducer";
-import StoreContext from "../../StoreContext";
+import {connect} from "react-redux";
 
-function HomeContainer(props) {
-    return (
-        <StoreContext.Consumer>
-            {(store) => {
-                let sortChange = (value) => {
-                    let action = onSortChangeActionCreator(value.current.value)
-                    store.dispatch(action)
-                }
 
-                let filterChange = (value) => {
-                    let action = onFilterChangeActionCreator(value)
-                    store.dispatch(action)
-                }
-
-                let state = store.getState()
-
-                return <Home sortChange={(value) => sortChange(value)} sortValue={state.home.sortValue}
-                             filter={state.home.filter} filterChange={value => {
-                    filterChange(value)
-                }}/>
-            }
-            }
-        </StoreContext.Consumer>
-    );
+let mapStateToProps = (state) => {
+    return {
+        sortValue: state.home.sortValue,
+        filter: state.home.filter
+    }
 }
+let mapDispatchToProps = (dispatch) => {
+    return {
+        sortChange: (value) => {
+            debugger
+            dispatch(onSortChangeActionCreator(value.current.value))
+        },
+        filterChange: (value) => {
+            dispatch(onFilterChangeActionCreator(value))
+        }
+    }
+}
+
+const HomeContainer = connect(mapStateToProps, mapDispatchToProps)(Home)
 
 export default HomeContainer;
