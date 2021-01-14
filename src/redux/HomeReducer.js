@@ -59,22 +59,27 @@ let initialState = {
 
 const homeReducer = (state = initialState, action) => {
     switch (action.type) {
-        case SortChange:
-            state.sortValue = action.par
-            return state
-        case filterChange:
+        case SortChange: {
+            let copyState = {...state}
+            copyState.sortValue = action.par
+            return copyState
+        }
+        case filterChange: {
+            let copyState = {...state}
+            copyState.filter = {...state.filter}
             let value = action.value
             if (value === 'souvenirs')
-                state.filter.souvenirs = !state.filter.souvenirs
+                copyState.filter.souvenirs = !copyState.filter.souvenirs
             else if (value === 'hat')
-                state.filter.hat = !state.filter.hat
+                copyState.filter.hat = !copyState.filter.hat
             else if (value === 'pants')
-                state.filter.pants = !state.filter.pants
+                copyState.filter.pants = !copyState.filter.pants
             else if (value === 'hoodies')
-                state.filter.hoodies = !state.filter.hoodies
+                copyState.filter.hoodies = !copyState.filter.hoodies
             else if (value === 'shirts')
-                state.filter.shirts = !state.filter.shirts
-            return state
+               copyState.filter.shirts = !copyState.filter.shirts
+            return copyState
+        }
         default:
             return state
     }
