@@ -33,7 +33,7 @@ const Header = (props) => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className='mr-auto'>
-                            <Nav.Link exact href='/'>Главная</Nav.Link>
+                            <Nav.Link exact href='/' className={CSS_Classes.home}>Главная</Nav.Link>
                         </Nav>
                         <Form inline>
                             <Form.Control type="text" placeholder="Поиск"
