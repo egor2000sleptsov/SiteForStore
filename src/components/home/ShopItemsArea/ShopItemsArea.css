@@ -1,7 +1,0 @@
-.shopItemsArea{
-    grid-area: shopItemsArea;
-    background-color: aqua;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
