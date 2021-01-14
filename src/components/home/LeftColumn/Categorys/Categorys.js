@@ -1,5 +1,5 @@
 import React from 'react';
-import CSS_Classes from "./Categorys.modules.css";
+import CSS_Classes from "./Categorys.module.css";
 
 function Categorys(props) {
     const handleChange = (event) => {

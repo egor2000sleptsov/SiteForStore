@@ -1,5 +1,5 @@
 import React from 'react';
-import CSS_Classes from "./LeftColumn.modules.css";
+import CSS_Classes from "./LeftColumn.module.css";
 import Price from "./Price/Price";
 import Categorys from "./Categorys/Categorys";
 
