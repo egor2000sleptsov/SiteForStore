@@ -22,8 +22,8 @@ const Header = (props) => {
 
     let searchEl = React.createRef()
     return (
-        <div className={CSS_Classes.header}>
-            <Navbar collapseOnSelect expand="sm" bg="primary" variant="light">
+        <div>
+            <Navbar collapseOnSelect expand="sm" variant="light" className={CSS_Classes.header}>
                 <Container>
                     <Navbar.Brand>
                         <img alt='не удалось загрузить изображение'
@@ -42,7 +42,7 @@ const Header = (props) => {
                                           // value={props.state.header.searchValue}
                                           ref={searchEl}
                             />
-                            <Button variant='primary' onClick={event => onButtonClick(event)}>Поиск</Button>
+                            <Button className={CSS_Classes.button} onClick={event => onButtonClick(event)}>Поиск</Button>
                         </Form>
                         <Nav>
                             <Nav.Link href="/cart">
@@ -58,7 +58,7 @@ const Header = (props) => {
             </Navbar>
             <Switch>
                 <Route exact path="/" render={()=> <HomeContainer />}/>
-                {/*<Route path="/cart" render={()=> <CartContainer />}/>*/}
+                <Route path="/cart" render={()=> <CartContainer />}/>
             </Switch>
         </div>
     );
