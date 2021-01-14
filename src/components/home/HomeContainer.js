@@ -1,6 +1,6 @@
 import React from 'react';
 import Home from "./Home";
-import {onSortChangeActionCreator} from "../../redux/HomeReducer";
+import {onFilterChangeActionCreator, onSortChangeActionCreator} from "../../redux/HomeReducer";
 import StoreContext from "../../StoreContext";
 
 function HomeContainer(props) {
@@ -11,10 +11,21 @@ function HomeContainer(props) {
                     let action = onSortChangeActionCreator(value.current.value)
                     store.dispatch(action)
                 }
+
+                let filterChange = (value) => {
+                    let action = onFilterChangeActionCreator(value)
+                    store.dispatch(action)
+                }
+
                 let state = store.getState()
-                return <Home sortChange={(value) => sortChange(value)} sortValue={state.home.sortValue}/>
+
+                return <Home sortChange={(value) => sortChange(value)} sortValue={state.home.sortValue}
+                             filter={state.home.filter} filterChange={value => {
+                    filterChange(value)
+                }}/>
             }
-            }</StoreContext.Consumer>
+            }
+        </StoreContext.Consumer>
     );
 }
 
