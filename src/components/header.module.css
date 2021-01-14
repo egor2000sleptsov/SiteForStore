@@ -4,11 +4,15 @@
 }
 
 .button{
-    background-color: #013378;
-    border-color: #013378;
+    background-color: #013378!important;
+    border-color: #013378!important;
 }
 
 .logo{
     width: 35px;
     height: 35px;
+}
+
+.home{
+    color: white!important;
 }
