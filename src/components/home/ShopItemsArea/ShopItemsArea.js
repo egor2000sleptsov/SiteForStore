@@ -5,16 +5,7 @@ import ShopItem from "./ShopItem/ShopItem";
 function ShopItemsArea() {
     return (
         <div className={CSS_Classes.shopItemsArea}>
-            <ShopItem/>
-            <ShopItem/>
-            <ShopItem/>
-            <ShopItem/>
-            <ShopItem/>
-            <ShopItem/>
-            <ShopItem/>
-            <ShopItem/>
-            <ShopItem/>
-            <ShopItem/>
+
         </div>
     );
 }
