@@ -2,12 +2,13 @@
     /*background-color: saddlebrown;*/
     /*border: black;*/
     border: 2px solid black;
-    height: 150px;
+    height: 500px;
     margin: 15px;
+    width: 300px;
 }
 img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 100px;
+    width: 200px;
 }

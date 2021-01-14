@@ -9,6 +9,12 @@ function ShopItemsArea() {
             <ShopItem/>
             <ShopItem/>
             <ShopItem/>
+            <ShopItem/>
+            <ShopItem/>
+            <ShopItem/>
+            <ShopItem/>
+            <ShopItem/>
+            <ShopItem/>
         </div>
     );
 }
