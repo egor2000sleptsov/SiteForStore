@@ -4,6 +4,6 @@
     "header header"
     "carousel carousel"
     "leftColumn shopItemsArea";
-    grid-template-rows: 100px 1fr 7fr;
+    grid-template-rows: 1px 1fr 7fr;
     grid-template-columns: 2fr 5fr;
 }

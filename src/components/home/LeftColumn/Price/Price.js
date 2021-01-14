@@ -10,7 +10,7 @@ function Price(props) {
     return (
         <div className={CSS_Classes.price}>
             <div>
-                <select name="" onChange={event => onSortChange(event)} ref={sortEl} value={props.sortValue}>
+                <select onChange={event => onSortChange(event)} ref={sortEl} value={props.sortValue} className={CSS_Classes.price}>
                     <option>Сначало Дешевые</option>
                     <option>Сначало Дорогие</option>
                     <option>---</option>

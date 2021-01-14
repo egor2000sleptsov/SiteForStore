@@ -14,21 +14,21 @@ function Categorys(props) {
 
     return (
         <div className={CSS_Classes.categorys}>
-            <p><input type='checkbox' onChange={event => {
+            <div className={CSS_Classes.checkbox}><p><label className={CSS_Classes.customCheckbox}><input type='checkbox' onChange={event => {
                 handleChange(event)
-            }} checked={props.filter.souvenirs} value='souvenirs' ref={souvenirs}/><label>Сувениры</label></p>
-            <p><input type='checkbox' onChange={event => {
+            }} checked={props.filter.souvenirs} value='souvenirs' ref={souvenirs}/><span>Сувениры</span></label></p></div>
+            <p><label ><input type='checkbox' onChange={event => {
                 handleChange(event)
-            }} checked={props.filter.hat} value='hat' ref={hat}/><label>Головный убор</label></p><b/>
-            <p><input type='checkbox' onChange={event => {
+            }} checked={props.filter.hat} value='hat' ref={hat}/>Головный убор</label></p><b/>
+            <p><label ><input type='checkbox' onChange={event => {
                 handleChange(event)
-            }} checked={props.filter.pants} value='pants' ref={pants}/><label>Штаны</label></p><b/>
-            <p><input type='checkbox' onChange={event => {
+            }} checked={props.filter.pants} value='pants' ref={pants}/>Штаны</label></p><b/>
+            <p><label ><input type='checkbox' onChange={event => {
                 handleChange(event)
-            }} checked={props.filter.hoodies} value='hoodies' ref={hoodies}/><label>Толстовки</label></p><b/>
-            <p><input type='checkbox' onChange={event => {
+            }} checked={props.filter.hoodies} value='hoodies' ref={hoodies}/>Толстовки</label></p><b/>
+            <p><label ><input type='checkbox' onChange={event => {
                 handleChange(event)
-            }} checked={props.filter.shirts} value='shirts' ref={shirts}/><label>Футболки</label></p><b/>
+            }} checked={props.filter.shirts} value='shirts' ref={shirts}/>Футболки</label></p><b/>
         </div>
     );
 }

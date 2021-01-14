@@ -11,7 +11,7 @@ let rerenderEntireThree = () => {
     ReactDOM.render(
         <React.StrictMode>
             <Provider store={store}>
-                <App/>
+                <App dispatch={store.dispatch}/>
             </Provider>
         </React.StrictMode>,
         document.getElementById('root')
