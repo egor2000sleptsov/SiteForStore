@@ -5,7 +5,7 @@ import img from "../files/img.png"
 import {onSearchButtonClickActionCreator, onSearchValueChangeActionCreator} from "../redux/HeaderReducer";
 import HomeContainer from "./home/HomeContainer";
 import CartContainer from "./cart/CartContainer";
-import s from './header.modules.css'
+import CSS_Classes from './header.modules.css';
 
 
 
@@ -23,7 +23,7 @@ const Header = (props) => {
     let searchEl = React.createRef()
     debugger
     return (
-        <div>
+        <div className={CSS_Classes.header}>
             <Navbar collapseOnSelect expand="sm" bg="primary" variant="light">
                 <Container>
                     <Navbar.Brand>
