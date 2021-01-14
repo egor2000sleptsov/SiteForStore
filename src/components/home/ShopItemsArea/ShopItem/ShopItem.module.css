@@ -1,6 +1,10 @@
 .shopItem{
     /*background-color: saddlebrown;*/
     /*border: black;*/
+<<<<<<< master
+=======
+    border: 2px solid black;
+>>>>>>> shop area and items changes
     height: 500px;
     margin: 15px;
     width: 300px;
@@ -11,6 +15,7 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+<<<<<<< master
     width: 200px;
 }
 
@@ -29,4 +34,7 @@ img {
     justify-content: space-between;
     padding: 10px;
     color: white;
+=======
+    width: 300px;
+>>>>>>> shop area and items changes
 }

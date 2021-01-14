@@ -1,5 +1,6 @@
 .header{
     grid-area: header;
+<<<<<<< master
     background-color: #013378;
 }
 
@@ -20,3 +21,13 @@
 .home{
     color: white!important;
 }
+=======
+}
+/*.glavTxt {*/
+/*    color: white;*/
+/*}*/
+/*.logo {*/
+/*    height: 20px;*/
+/*    width: 20px;*/
+/*}*/
+>>>>>>> shop area and items changes

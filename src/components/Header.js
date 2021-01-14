@@ -19,7 +19,7 @@ const Header = (props) => {
         <div>
             <Navbar collapseOnSelect expand="sm" variant="light" className={CSS_Classes.header}>
                 <Container>
-                    <Navbar.Brand>
+                    <Navbar.Brand className={CSS_Classes.logo}>
                         <img alt='не удалось загрузить изображение'
                              src={img}
                              className={CSS_Classes.logo}/>
@@ -27,7 +27,11 @@ const Header = (props) => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className='mr-auto'>
+<<<<<<< master
                             <Nav.Link href='/' className={CSS_Classes.home}>Главная</Nav.Link>
+=======
+                            <Nav.Link exact href='/' className={CSS_Classes.glavTxt}>Главная</Nav.Link>
+>>>>>>> shop area and items changes
                         </Nav>
                         <Form inline onSubmit={event => event.preventDefault()}>
                             <Form.Control type="text" placeholder="Поиск"

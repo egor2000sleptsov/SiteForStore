@@ -47,7 +47,26 @@ function ShopItemsArea(props) {
 
     return (
         <div className={CSS_Classes.shopItemsArea}>
+<<<<<<< master
             {items}
+=======
+            <ShopItem/>
+            <ShopItem/>
+            <ShopItem/>
+            <ShopItem/>
+            <ShopItem/>
+            <ShopItem/>
+            <ShopItem/>
+            <ShopItem/>
+            <ShopItem/>
+            <ShopItem/>
+            <ShopItem/>
+            <ShopItem/>
+            <ShopItem/>
+            <ShopItem/>
+            <ShopItem/>
+            <ShopItem/>
+>>>>>>> shop area and items changes
         </div>
     );
 }
