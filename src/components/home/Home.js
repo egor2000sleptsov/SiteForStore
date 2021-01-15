@@ -2,7 +2,6 @@ import React from 'react';
 import Carousel from "./Carousel/Carousel";
 import CSS_Classes from "./home.module.css";
 import LeftColumn from "./LeftColumn/LeftColumn";
-import ShopItemsArea from "./ShopItemsArea/ShopItemsArea";
 import ShopItemContainer from "./ShopItemsArea/ShopItemContainer";
 
 function Home(props) {
