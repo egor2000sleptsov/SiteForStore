@@ -1,10 +1,10 @@
-import React from 'react';
 import {connect} from "react-redux";
 import ShopItemsArea from "./ShopItemsArea";
 
 let mapStateToProps = (state) => {
     return {
-        items: state.home.items
+        items: state.home.items,
+        sortValue: state.home.sortValue
     }
 }
 let mapDispatchToProps = (dispatch) => {

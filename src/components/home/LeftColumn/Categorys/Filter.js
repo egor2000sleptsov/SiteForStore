@@ -3,10 +3,8 @@ import CSS_Classes from "./Filter.module.css";
 
 function Filter(props) {
     const handleChange = (event) => {
-        debugger
         props.filterChange(event.target.value)
     }
-    debugger
     let clothes = React.createRef()
     let cap = React.createRef()
     let cups = React.createRef()
@@ -16,7 +14,6 @@ function Filter(props) {
     let icons = React.createRef()
     let stickers = React.createRef()
     let umbrellas = React.createRef()
-    debugger
     return (
         <div className={CSS_Classes.categorys}>
             <label>

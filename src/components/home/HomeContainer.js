@@ -1,4 +1,3 @@
-import React from 'react';
 import Home from "./Home";
 import {onFilterChangeActionCreator, onSortChangeActionCreator} from "../../redux/HomeReducer";
 import {connect} from "react-redux";
