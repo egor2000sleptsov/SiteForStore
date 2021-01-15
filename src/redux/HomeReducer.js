@@ -4,13 +4,17 @@ const filterChange = 'filterHasChange';
 let initialState = {
     sortValue: '---',
     filter: {
-        souvenirs: false,
-        hat: false,
-        pants: false,
-        hoodies: false,
-        shirts: false
+        clothes: false,
+        cap: false,
+        cups: false,
+        magnets: false,
+        notes: false,
+        pens: false,
+        icons: false,
+        stickers: false,
+        umbrellas: false
     },
-    items:[
+    items: [
         {
             title: "Бейсболка классическая красная с белым кантом «Эмблема ДВФУ»",
             price: 815,
@@ -68,16 +72,24 @@ const homeReducer = (state = initialState, action) => {
             let copyState = {...state}
             copyState.filter = {...state.filter}
             let value = action.value
-            if (value === 'souvenirs')
-                copyState.filter.souvenirs = !copyState.filter.souvenirs
-            else if (value === 'hat')
-                copyState.filter.hat = !copyState.filter.hat
-            else if (value === 'pants')
-                copyState.filter.pants = !copyState.filter.pants
-            else if (value === 'hoodies')
-                copyState.filter.hoodies = !copyState.filter.hoodies
-            else if (value === 'shirts')
-               copyState.filter.shirts = !copyState.filter.shirts
+            if (value === 'clothes')
+                copyState.filter.clothes = !copyState.filter.clothes
+            else if (value === 'cap')
+                copyState.filter.cap = !copyState.filter.cap
+            else if (value === 'cups')
+                copyState.filter.cups = !copyState.filter.cups
+            else if (value === 'magnets')
+                copyState.filter.magnets = !copyState.filter.magnets
+            else if (value === 'notes')
+                copyState.filter.notes = !copyState.filter.notes
+            else if (value === 'pens')
+                copyState.filter.pens = !copyState.filter.pens
+            else if (value === 'icons')
+                copyState.filter.icons = !copyState.filter.icons
+            else if (value === 'stickers')
+                copyState.filter.stickers = !copyState.filter.stickers
+            else if (value === 'umbrellas')
+                copyState.filter.umbrellas = !copyState.filter.umbrellas
             return copyState
         }
         default:

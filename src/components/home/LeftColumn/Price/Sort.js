@@ -1,7 +1,7 @@
 import React from 'react';
-import CSS_Classes from "./Price.module.css";
+import CSS_Classes from "./Sort.module.css";
 
-function Price(props) {
+function Sort(props) {
     let sortEl = React.createRef()
 
     const onSortChange = event => {
@@ -19,4 +19,4 @@ function Price(props) {
         </div>
     );
 }
-export default Price;
+export default Sort;

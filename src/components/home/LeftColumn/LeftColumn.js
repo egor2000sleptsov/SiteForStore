@@ -1,13 +1,13 @@
 import React from 'react';
 import CSS_Classes from "./LeftColumn.module.css";
-import Price from "./Price/Price";
-import Categorys from "./Categorys/Categorys";
+import Sort from "./Price/Sort";
+import Filter from "./Categorys/Filter";
 
 function LeftColumn(props) {
     return (
         <div className={CSS_Classes.leftColumn}>
-            <Price sortChange={props.sortChange} sortValue={props.sortValue}/>
-            <Categorys filter={props.filter} filterChange={props.filterChange}/>
+            <Sort sortChange={props.sortChange} sortValue={props.sortValue}/>
+            <Filter filter={props.filter} filterChange={props.filterChange}/>
         </div>
     );
 }

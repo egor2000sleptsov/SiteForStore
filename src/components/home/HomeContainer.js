@@ -13,7 +13,6 @@ let mapStateToProps = (state) => {
 let mapDispatchToProps = (dispatch) => {
     return {
         sortChange: (value) => {
-            debugger
             dispatch(onSortChangeActionCreator(value.current.value))
         },
         filterChange: (value) => {
