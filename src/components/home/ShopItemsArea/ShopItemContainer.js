@@ -1,19 +1,12 @@
 import React from 'react';
-import {connect} from "react-redux";
-import ShopItemsArea from "./ShopItemsArea";
+import CSS_Classes from "./ShopItem/ShopItem.module.css";
 
-let mapStateToProps = (state) => {
-    return {
-        items: state.home.items
-    }
+function ShopItemContainer() {
+    return (
+        <div className={CSS_Classes.shopItem}>
+
+        </div>
+    );
 }
-let mapDispatchToProps = (dispatch) => {
-    return {
-        onchange: () => {
-            alert('clicked')
-        }
-    }
-}
-const ShopItemContainer = connect(mapStateToProps, mapDispatchToProps)(ShopItemsArea)
 
 export default ShopItemContainer;
