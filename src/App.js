@@ -1,12 +1,12 @@
-import Header from "./components/Header";
 import {BrowserRouter as Router} from "react-router-dom";
+import HeaderContainer from "./components/HeaderContainer";
 
 
 function App(props) {
     return (
         <Router>
             <div className="App">
-                <Header dispatch={props.dispatch}/>
+                <HeaderContainer />
             </div>
         </Router>
     );

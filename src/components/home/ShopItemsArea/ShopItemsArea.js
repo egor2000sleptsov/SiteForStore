@@ -15,7 +15,9 @@ function ShopItemsArea(props) {
             src={el.src}
             title={el.title}
             desc={el.desc}
-            price={el.price}/>
+            price={el.price}
+            key={items.indexOf(el)}
+        />
     ))
     //TODO
     return (

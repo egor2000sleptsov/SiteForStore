@@ -10,7 +10,7 @@ import {Provider} from "react-redux";
 ReactDOM.render(
     <React.StrictMode>
         <Provider store={store}>
-            <App dispatch={store.dispatch}/>
+            <App/>
         </Provider>
     </React.StrictMode>,
     document.getElementById('root')
