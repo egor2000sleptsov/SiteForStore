@@ -2,7 +2,6 @@ import React from 'react';
 import {Switch, Route} from "react-router-dom";
 import {Button, Container, Form, Nav, Navbar} from "react-bootstrap";
 import img from "../files/img.png"
-import {onSearchButtonClickActionCreator, onSearchValueChangeActionCreator} from "../redux/HeaderReducer";
 import HomeContainer from "./home/HomeContainer";
 import CartContainer from "./cart/CartContainer";
 import CSS_Classes from './header.module.css';
@@ -12,12 +11,10 @@ import CSS_Classes from './header.module.css';
 
 const Header = (props) => {
     let onSearchValueChange = event => {
-        let action = onSearchValueChangeActionCreator(searchEl.current.value)
-        props.dispatch(action)
+        props.onSearchValueChange(searchEl.current.value)
     }
     let onButtonClick = event => {
-        let action = onSearchButtonClickActionCreator()
-        props.dispatch(action)
+        props.onButtonClick()
     }
 
     let searchEl = React.createRef()
@@ -33,13 +30,13 @@ const Header = (props) => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className='mr-auto'>
-                            <Nav.Link exact href='/' className={CSS_Classes.home}>Главная</Nav.Link>
+                            <Nav.Link href='/' className={CSS_Classes.home}>Главная</Nav.Link>
                         </Nav>
                         <Form inline>
                             <Form.Control type="text" placeholder="Поиск"
                                           onChange={event => onSearchValueChange(event)}
                                           className='mr-sm-2'
-                                          // value={props.state.header.searchValue}
+                                          value={props.searchValue}
                                           ref={searchEl}
                             />
                             <Button className={CSS_Classes.button} onClick={event => onButtonClick(event)}>Поиск</Button>

@@ -8,8 +8,9 @@ let initialState ={
 const headerReducer = (state = initialState, action) => {
     switch (action.type) {
         case searchValue:
-            state.searchValue = action.newValue
-            return state
+            let copyState = {...state}
+            copyState.searchValue = action.newValue
+            return copyState
         case searchButtonValue:
             alert('clicked')
             return state
