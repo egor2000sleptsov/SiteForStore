@@ -14,6 +14,7 @@ let initialState = {
         stickers: false,
         umbrellas: false
     },
+    filterOn: false,
     items: [
         {
             title: "Бейсболка классическая красная с белым кантом «Эмблема ДВФУ»",
@@ -83,8 +84,10 @@ const homeReducer = (state = initialState, action) => {
             return copyState
         }
         case filterChange: {
+
             let copyState = {...state}
             copyState.filter = {...state.filter}
+            copyState.filterOn = false
             let value = action.value
             if (value === 'clothes')
                 copyState.filter.clothes = !copyState.filter.clothes
@@ -104,6 +107,10 @@ const homeReducer = (state = initialState, action) => {
                 copyState.filter.stickers = !copyState.filter.stickers
             else if (value === 'umbrellas')
                 copyState.filter.umbrellas = !copyState.filter.umbrellas
+            for (let filterKey in copyState.filter) {
+                if (copyState.filter[filterKey])
+                    copyState.filterOn = true
+            }
             return copyState
         }
         default:

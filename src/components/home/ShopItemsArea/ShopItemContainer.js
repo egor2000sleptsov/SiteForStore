@@ -5,7 +5,8 @@ let mapStateToProps = (state) => {
     return {
         items: state.home.items,
         sortValue: state.home.sortValue,
-        filter: state.home.filter
+        filter: state.home.filter,
+        filterOn: state.home.filterOn
     }
 }
 let mapDispatchToProps = (dispatch) => {
