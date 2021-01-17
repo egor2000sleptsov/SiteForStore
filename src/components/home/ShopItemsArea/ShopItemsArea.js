@@ -19,9 +19,9 @@ function ShopItemsArea(props) {
         items = temp
 
 
-    if (props.sortValue === 'Сначало Дешевые')
+    if (props.sortValue === 'Сначала дешевые')
         items.sort((prev, next) => prev.price - next.price)
-    else if (props.sortValue === 'Сначало Дорогие')
+    else if (props.sortValue === 'Сначала дорогие')
         items.sort((prev, next) => prev.price - next.price).reverse()
     else if (props.sortValue === '---')
         items.sort(() => Math.random() - 0.5)
