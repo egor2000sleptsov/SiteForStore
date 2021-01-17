@@ -4,6 +4,21 @@ import ShopItem from "./ShopItem/ShopItem";
 
 function ShopItemsArea(props) {
     let items = props.items
+
+    let filter = props.filter
+    let temp = []
+    for (let filterKey in filter) {
+        if (filter[filterKey] === true) {
+            items.forEach((el) => {
+                if (el.type === filterKey)
+                    temp.push(el)
+            })
+        }
+    }
+    if (temp.length !== 0)
+        items = temp
+
+
     if (props.sortValue === 'Сначало Дешевые')
         items.sort((prev, next) => prev.price - next.price)
     else if (props.sortValue === 'Сначало Дорогие')
@@ -19,7 +34,7 @@ function ShopItemsArea(props) {
             key={items.indexOf(el)}
         />
     ))
-    //TODO
+
     return (
         <div className={CSS_Classes.shopItemsArea}>
             {items}
