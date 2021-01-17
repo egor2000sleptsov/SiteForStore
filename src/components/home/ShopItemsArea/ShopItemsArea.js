@@ -4,7 +4,7 @@ import ShopItem from "./ShopItem/ShopItem";
 
 function ShopItemsArea(props) {
     let items = props.items
-
+    let filterOn = props.filterOn
     let filter = props.filter
     let temp = []
     for (let filterKey in filter) {
@@ -15,7 +15,8 @@ function ShopItemsArea(props) {
             })
         }
     }
-    if (temp.length !== 0)
+
+    if (filterOn)
         items = temp
 
 
@@ -25,6 +26,7 @@ function ShopItemsArea(props) {
         items.sort((prev, next) => prev.price - next.price).reverse()
     else if (props.sortValue === '---')
         items.sort(() => Math.random() - 0.5)
+
     items = items.map(el => (
         <ShopItem
             src={el.src}
