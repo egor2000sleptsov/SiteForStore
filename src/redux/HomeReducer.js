@@ -64,6 +64,13 @@ let initialState = {
             src: 'https://www.dvfu.ru/upload/medialibrary/907/319_%D0%B3.png',
             type: 'umbrellas'
         },
+        {
+            title: "Толстовка-кенгуру FEFU",
+            price: 3400,
+            desc: "Цвет: серо-синий. Материал: хлопок 80%, полиэстер 20%. Размеры: XS-XXL (44-54)",
+            src: 'https://www.dvfu.ru/upload/medialibrary/686/%D1%82%D0%BE%D0%BB%D1%81%D1%82%D0%BE%D0%B2%D0%BA%D0%B04.jpg',
+            type: 'clothes'
+        },
 
     ]
 }
