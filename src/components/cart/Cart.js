@@ -1,6 +1,6 @@
 import React from 'react';
 import CartItems from "./CartItems/CartItems";
-import CSS from './cart.module.css'
+// import CSS from './cart.module.css'
 
 function Cart(props) {
     let items = props.items
