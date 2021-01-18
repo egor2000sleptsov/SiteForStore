@@ -1,10 +1,20 @@
 .categorys {
     padding-top: 15px;
-
 }
+.spans{
+    color: white;
+    font-size: 21px;
+    text-transform: uppercase;
+}
+
+
 
 .checkbox {
     margin-bottom: 0.2em;
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 /* для элемента input c type="checkbox" */

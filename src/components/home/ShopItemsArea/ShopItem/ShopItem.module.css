@@ -1,14 +1,32 @@
 .shopItem{
     /*background-color: saddlebrown;*/
     /*border: black;*/
-    border: 2px solid black;
     height: 500px;
     margin: 15px;
     width: 300px;
+    border-radius: 10px;
+    background-color: #4dbbe9;
 }
 img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 200px;
+}
+
+.title{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.b{
+    color: white;
+    font-size: 21px;
+}
+
+.desc{
+    display:flex;
+    justify-content: space-between;
+    padding: 10px;
+    color: white;
 }

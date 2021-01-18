@@ -4,19 +4,19 @@ import ShopItem from "./ShopItem/ShopItem";
 
 function ShopItemsArea(props) {
     let items = props.items
-    let searchItemsArray = []
+    let temp = []
     if (props.searchResult !== "") {
         // eslint-disable-next-line array-callback-return
-        searchItemsArray = items.filter(el => {
+        temp = items.filter(el => {
             if (el.desc.toLowerCase().indexOf(props.searchResult) !== -1 || el.title.toLowerCase().indexOf(props.searchResult) !== -1) {
                 return el
             }
         })
-        items = searchItemsArray
+        items = temp
     }
     let filterOn = props.filterOn
     let filter = props.filter
-    let temp = []
+    temp = []
     for (let filterKey in filter) {
         if (filter[filterKey] === true) {
             items.forEach((el) => {
@@ -25,10 +25,8 @@ function ShopItemsArea(props) {
             })
         }
     }
-
     if (filterOn)
         items = temp
-
 
     if (props.sortValue === 'Сначала дешевые')
         items.sort((prev, next) => prev.price - next.price)
