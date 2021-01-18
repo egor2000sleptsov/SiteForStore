@@ -1,28 +1,34 @@
-const searchValue = "changeSearchValue";
+const searchBoxValue = "changeSearchValue";
 const searchButtonValue = 'searchButtonClicked';
 
-let initialState ={
-    searchValue: ''
+let initialState = {
+    searchBoxValue: '',
+    searchResult: ''
 }
 
 const headerReducer = (state = initialState, action) => {
     switch (action.type) {
-        case searchValue:
+        case searchBoxValue: {
             let copyState = {...state}
-            copyState.searchValue = action.newValue
+            copyState.searchBoxValue = action.newValue
             return copyState
-        case searchButtonValue:
-            alert('clicked')
-            return state
+        }
+        case searchButtonValue: {
+            let copyState = {...state}
+            copyState.searchResult = copyState.searchBoxValue
+            return copyState
+        }
         default:
             return state
     }
 }
 
 export const onSearchValueChangeActionCreator = (value) => ({
-    type: searchValue,
+    type: searchBoxValue,
     newValue: value
 })
-export const onSearchButtonClickActionCreator = () => ({type: searchButtonValue})
+export const onSearchButtonClickActionCreator = () => ({
+    type: searchButtonValue
+})
 
 export default headerReducer
