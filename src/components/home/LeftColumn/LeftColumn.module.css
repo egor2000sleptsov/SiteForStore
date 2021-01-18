@@ -1,5 +1,11 @@
 .leftColumn{
     grid-area: leftColumn;
     padding: 15px;
+
     /*background-color: lightcoral;*/
+}
+
+.items{
+    background-color: #013378;
+    border-radius: 10px;
 }

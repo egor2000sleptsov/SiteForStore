@@ -72,7 +72,6 @@ let initialState = {
             src: 'https://www.dvfu.ru/upload/medialibrary/686/%D1%82%D0%BE%D0%BB%D1%81%D1%82%D0%BE%D0%B2%D0%BA%D0%B04.jpg',
             type: 'clothes'
         },
-
     ]
 }
 

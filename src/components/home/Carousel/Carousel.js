@@ -1,14 +1,18 @@
 import React from 'react';
 import {Carousel as Car} from "react-bootstrap";
 import CSS_Classes from "./Carousel.module.css";
+import img1 from '../../../files/imgs/1.jpg'
+import img2 from '../../../files/imgs/2.jpg'
+import img3 from '../../../files/imgs/3.jpg'
 
 const Carousel = (props) => {
     return (
         <Car nextLabel='Следующий' className={CSS_Classes.carousel}>
             <Car.Item>
                 <img
-                    src="https://i1.photo.2gis.com/images/branch/25/3518437244437223_a8c8.jpg"
-                    className='d-block w-100' alt='First slide' />
+                    src={img1}
+                    className={`d-block w-100 ` +CSS_Classes.img} alt='First slide'
+                />
                 <Car.Caption>
                     <h3>
                         First slide label
@@ -19,7 +23,7 @@ const Carousel = (props) => {
                 </Car.Caption>
             </Car.Item><Car.Item>
             <img
-                src='https://i1.photo.2gis.com/images/branch/25/3518437244436147_130c.jpg'
+                src={img2}
                 className='d-block w-100'  alt='Second slide' />
             <Car.Caption>
                 <h3>
@@ -31,7 +35,7 @@ const Carousel = (props) => {
             </Car.Caption>
         </Car.Item><Car.Item>
             <img
-                src='https://avatars.mds.yandex.net/get-altay/3522550/2a0000017684c0cf315ae5ca5282afdc02a5/XXXL'
+                src={img3}
                 className='d-block w-100' alt='Third slide' />
             <Car.Caption>
                 <h3>

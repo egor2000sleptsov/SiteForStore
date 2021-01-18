@@ -13,9 +13,6 @@ const Header = (props) => {
     let onSearchValueChange = event => {
         props.onSearchValueChange(searchEl.current.value)
     }
-    // let onButtonClick = event => {
-    //     props.onButtonClick()
-    // }
 
     let searchEl = React.createRef()
     return (
@@ -40,7 +37,6 @@ const Header = (props) => {
                                           ref={searchEl}
 
                             />
-                            {/*<Button className={CSS_Classes.button} onClick={event => onButtonClick(event)}>Поиск</Button>*/}
                         </Form>
                         <Nav>
                             <NavLink href="/cart">
