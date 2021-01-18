@@ -29,7 +29,7 @@ const Header = (props) => {
                         <Nav className='mr-auto'>
                             <Nav.Link href='/' className={CSS_Classes.home}>Главная</Nav.Link>
                         </Nav>
-                        <Form inline>
+                        <Form inline onSubmit={event => event.preventDefault()}>
                             <Form.Control type="text" placeholder="Поиск"
                                           onChange={event => onSearchValueChange(event)}
                                           className='mr-sm-2'
