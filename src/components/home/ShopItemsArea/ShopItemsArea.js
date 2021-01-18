@@ -4,6 +4,15 @@ import ShopItem from "./ShopItem/ShopItem";
 
 function ShopItemsArea(props) {
     let items = props.items
+    let searchItemsArray = []
+    if (props.searchResult !== "") {
+        searchItemsArray = items.filter(el => {
+            if (el.desc.toLowerCase().indexOf(props.searchResult) !== -1 || el.title.toLowerCase().indexOf(props.searchResult) !== -1) {
+                return el
+            }
+        })
+        items = searchItemsArray
+    }
     let filterOn = props.filterOn
     let filter = props.filter
     let temp = []
