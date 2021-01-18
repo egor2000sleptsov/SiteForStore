@@ -7,7 +7,7 @@ let mapStateToProps = (state) => {
         sortValue: state.home.sortValue,
         filter: state.home.filter,
         filterOn: state.home.filterOn,
-        searchResult: state.header.searchResult.toLowerCase()
+        searchResult: state.header.searchBoxValue.toLowerCase()
     }
 }
 let mapDispatchToProps = (dispatch) => {
