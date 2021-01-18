@@ -23,7 +23,7 @@ function CartItems(props) {
                     </div>
                     <div style={{display: "flex", alignItems: "center", margin: 10,justifyContent:"space-between"}} >
                         <h3>Итого</h3>
-                        <h2 style={{}}>{props.count * props.price}</h2>
+                        <h2 style={{}}>{props.count * props.price}р.</h2>
                     </div>
                 </div>
             </div>

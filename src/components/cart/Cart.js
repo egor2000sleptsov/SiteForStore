@@ -1,6 +1,7 @@
 import React from 'react';
 import CartItems from "./CartItems/CartItems";
-// import CSS from './cart.module.css'
+import CSS from './cart.module.css'
+import {Button} from "react-bootstrap";
 
 function Cart(props) {
     let items = props.items
@@ -13,8 +14,11 @@ function Cart(props) {
             key={items.indexOf(el)}
         />))
     return (
-        <div>
+        <div className={CSS.cart}>
             {items}
+            <div>
+                <Button>оформить заказ</Button>
+            </div>
         </div>
     );
 }
