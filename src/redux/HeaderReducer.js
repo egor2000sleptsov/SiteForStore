@@ -11,6 +11,8 @@ const headerReducer = (state = initialState, action) => {
         case searchBoxValue: {
             let copyState = {...state}
             copyState.searchBoxValue = action.newValue
+            if (action.newValue.length === 0)
+                copyState.searchResult = action.newValue
             return copyState
         }
         case searchButtonValue: {
