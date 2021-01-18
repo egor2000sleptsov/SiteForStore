@@ -1,10 +1,14 @@
-import React from 'react';
 import Cart from "./Cart";
+import {connect} from "react-redux";
 
-function CartContainer(props) {
-    return (
-        <Cart/>//TODO
-    );
-}
+let mapStateToProps = (state) => ({
+    items: state.cart.array
+})
+
+let mapDispatchToProps = (dispatch) => ({
+
+})
+
+const CartContainer = connect(mapStateToProps,mapDispatchToProps())(Cart)
 
 export default CartContainer;
