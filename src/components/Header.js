@@ -1,6 +1,6 @@
 import React from 'react';
 import {Switch, Route} from "react-router-dom";
-import {Button, Container, Form, Nav, Navbar, NavLink} from "react-bootstrap";
+import {Container, Form, Nav, Navbar, NavLink} from "react-bootstrap";
 import img from "../files/img.png"
 import HomeContainer from "./home/HomeContainer";
 import CartContainer from "./cart/CartContainer";
@@ -13,9 +13,9 @@ const Header = (props) => {
     let onSearchValueChange = event => {
         props.onSearchValueChange(searchEl.current.value)
     }
-    let onButtonClick = event => {
-        props.onButtonClick()
-    }
+    // let onButtonClick = event => {
+    //     props.onButtonClick()
+    // }
 
     let searchEl = React.createRef()
     return (
@@ -38,8 +38,9 @@ const Header = (props) => {
                                           className='mr-sm-2'
                                           value={props.searchValue}
                                           ref={searchEl}
+
                             />
-                            <Button className={CSS_Classes.button} onClick={event => onButtonClick(event)}>Поиск</Button>
+                            {/*<Button className={CSS_Classes.button} onClick={event => onButtonClick(event)}>Поиск</Button>*/}
                         </Form>
                         <Nav>
                             <NavLink href="/cart">
