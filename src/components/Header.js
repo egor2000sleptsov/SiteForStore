@@ -28,10 +28,14 @@ const Header = (props) => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className='mr-auto'>
 <<<<<<< master
+<<<<<<< master
                             <Nav.Link href='/' className={CSS_Classes.home}>Главная</Nav.Link>
 =======
                             <Nav.Link exact href='/' className={CSS_Classes.glavTxt}>Главная</Nav.Link>
 >>>>>>> shop area and items changes
+=======
+                            <Nav.Link exact href='/' className={CSS_Classes.glavTxt}>Главная</Nav.Link>
+>>>>>>> cart
                         </Nav>
                         <Form inline onSubmit={event => event.preventDefault()}>
                             <Form.Control type="text" placeholder="Поиск"
