@@ -6,6 +6,7 @@ function ShopItemsArea(props) {
     let items = props.items
     let searchItemsArray = []
     if (props.searchResult !== "") {
+        // eslint-disable-next-line array-callback-return
         searchItemsArray = items.filter(el => {
             if (el.desc.toLowerCase().indexOf(props.searchResult) !== -1 || el.title.toLowerCase().indexOf(props.searchResult) !== -1) {
                 return el
