@@ -39,7 +39,7 @@ function ShopItemsArea(props) {
         <ShopItem
             src={el.src}
             title={el.title}
-            desc={el.desc}
+            desc={el.desc.toLowerCase()}
             price={el.price}
             key={items.indexOf(el)}
         />
