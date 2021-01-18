@@ -7,7 +7,7 @@ const Carousel = (props) => {
         <Car nextLabel='Следующий' className={CSS_Classes.carousel}>
             <Car.Item>
                 <img
-                    src="http://safelme.com/wp-content/uploads/2016/06/03-min.png"
+                    src="https://i1.photo.2gis.com/images/branch/25/3518437244437223_a8c8.jpg"
                     className='d-block w-100' alt='First slide' />
                 <Car.Caption>
                     <h3>
@@ -19,7 +19,7 @@ const Carousel = (props) => {
                 </Car.Caption>
             </Car.Item><Car.Item>
             <img
-                src='http://safelme.com/wp-content/uploads/2016/06/03-min.png'
+                src='https://i1.photo.2gis.com/images/branch/25/3518437244436147_130c.jpg'
                 className='d-block w-100'  alt='Second slide' />
             <Car.Caption>
                 <h3>
@@ -31,7 +31,7 @@ const Carousel = (props) => {
             </Car.Caption>
         </Car.Item><Car.Item>
             <img
-                src='http://safelme.com/wp-content/uploads/2016/06/03-min.png'
+                src='https://avatars.mds.yandex.net/get-altay/3522550/2a0000017684c0cf315ae5ca5282afdc02a5/XXXL'
                 className='d-block w-100' alt='Third slide' />
             <Car.Caption>
                 <h3>
